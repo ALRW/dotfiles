@@ -1,0 +1,4 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ctags="`brew --prefix`/bin/ctags"
