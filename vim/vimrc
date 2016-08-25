@@ -9,7 +9,7 @@ colorscheme PerfectDark
 
 
 " Map Ctrl n to open NerdTree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " The Silver Searcher
 if executable('ag')
@@ -23,6 +23,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Opens silver searcher in vim for easy searching
+nnoremap <leader>a :Ag
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
@@ -32,6 +34,7 @@ nmap <leader>t :TagbarToggle<CR>
 " CONFIG
 " show line numbers
 set number
+set numberwidth=5
 " highlight which line the cursor is on
 set cursorline
 " load filetype specific indent files
@@ -67,6 +70,22 @@ set autowrite
 set tabstop=2
 " converts tabs to spaces
 set expandtab
+" display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
 
 " MOVEMENT
 " move vertically by visual line
@@ -85,4 +104,7 @@ nnoremap <C-l> <C-w>l
 
 " LEADER SHORTCUTS
 let mapleader=" "
+" use jk to exit insert mode and write changes
 inoremap jk <esc>:w<Enter>
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
