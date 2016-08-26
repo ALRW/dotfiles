@@ -27,10 +27,8 @@
 [branch "master"]
   remote = origin
   merge = refs/heads/master
-
-[user]
-	name = ALRW
-	email = awerner1@googlemail.com
+  [include]
+          path = ~/.gitconfig.local
 [core]
 	excludesfile = ~/.gitignore
 	editor = /usr/bin/vim

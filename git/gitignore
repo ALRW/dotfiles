@@ -20,3 +20,7 @@ node_modules
 
 # Tag files for ctags
 tags
+
+# local git config
+.gitconfig.local
+gitconfig.local
