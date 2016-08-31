@@ -24,3 +24,9 @@ tags
 # local git config
 .gitconfig.local
 gitconfig.local
+
+# ignore swap files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim

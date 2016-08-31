@@ -7,10 +7,6 @@ endif
 set background=dark
 colorscheme PerfectDark
 
-
-" Map Ctrl n to open NerdTree
-map <leader>n :NERDTreeToggle<CR>
-
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
@@ -64,6 +60,11 @@ set visualbell
 set mouse=a
 " Automatically write before running a command
 set autowrite
+" enable paste with Ctrl v 
+set pastetoggle=<F10>
+inoremap <C-v> <F10><C-r>+<F10>
+" enable yanking visual selection yanking using Ctrl-C
+vnoremap <C-c> "+y
 
 " SPACES AND TABS
 " number of visual spaces per tab
@@ -108,3 +109,5 @@ let mapleader=" "
 inoremap jk <esc>:w<Enter>
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+" Map Ctrl n to open NerdTree
+map <leader>n :NERDTreeToggle<CR>
