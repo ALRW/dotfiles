@@ -108,6 +108,6 @@ export PATH=/Users/awerner/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-v2.4/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
-
+export EDITOR="vim"
 export NVM_DIR="/Users/awerner/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
