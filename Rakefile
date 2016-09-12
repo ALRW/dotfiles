@@ -18,10 +18,10 @@ def build_link(file, basename, source, target)
         elsif File.exist?(target)
             error "There is already a file for #{basename} consider removing or replacing \n #{target}"
         else
-            into "Create symlink for #{basename}"
+            info "Create symlink for #{basename}: (y/n)\n"
             print '? '
             if STDIN.gets =~ /^y/i
-                info "Creating symlink for #{basename} \n #{target} --> #{source}"
+                info "Creating symlink for #{basename} \n ~/.#{basename} --> #{source}"
                 FileUtils.ln_s(source, target)
                 system "source #{target}"
             else
