@@ -31,31 +31,25 @@ def build_link(file, basename, source, target)
     end
 end
 
+def build_in_dir
+  Dir['*'].each do |file|
+    source = File.join(Dir.pwd, file)
+    basename = File.basename(source)
+    target = File.expand_path("~/.#{basename}")
+    build_link(file, basename, source, target)
+  end
+end
+
 task default: :install
 
 desc 'Install all dotfiles'
 
 task :install do
-    Dir['*'].each do |file|
-        source = File.join(Dir.pwd, file)
-        basename = File.basename(source)
-        target = File.expand_path("~/.#{basename}")
-        build_link(file, basename, source, target)
-    end
+    build_in_dir
     Dir.chdir(Dir.pwd + '/git') do
-        Dir['*'].each do |git_file|
-            git_source = File.join(Dir.pwd, git_file)
-            git_basename = File.basename(git_source)
-            git_target = File.expand_path("~/.#{git_basename}")
-            build_link(git_file, git_basename, git_source, git_target)
-        end
+        build_in_dir
     end
     Dir.chdir(Dir.pwd + '/vim') do
-        Dir['*'].each do |vim_file|
-            vim_source = File.join(Dir.pwd, vim_file)
-            vim_basename = File.basename(vim_source)
-            vim_target = File.expand_path("~/.#{vim_basename}")
-            build_link(vim_file, vim_basename, vim_source, vim_target)
-        end
+        build_in_dir
     end
 end
