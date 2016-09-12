@@ -9,7 +9,7 @@ To install rake is required
 gem install rake
 ```
 
-The install script currently symlinks all top level files and those in the git and vim folders to run simply:
+The install script currently symlinks all top level files and those in the git and vim folders. To run the installation simply:
 
 ```
 rake install
