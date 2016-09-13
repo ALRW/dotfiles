@@ -126,9 +126,9 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/bin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/bin:$PATH
-export PATH=/Users/${USER}/Library/activator-dist-1.3.10:$PATH
+export PATH=/$HOME/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-v2.4/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
-export NVM_DIR="/Users/${USER}/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
