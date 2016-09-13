@@ -3,7 +3,7 @@ DOTFILES
 
 Current base system setup. Feel free to take and use whatever is useful.
 
-To install rake is required
+To install, rake is required
 
 ```
 gem install rake
@@ -19,4 +19,3 @@ To do
 -----------
 - Update script to traverse through all folders and files within the dotfiles repo without having to manually add them to the script
 - Add Mac specific configs
-- Add system update script
