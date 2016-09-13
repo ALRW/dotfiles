@@ -1,12 +1,38 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/awerner/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+declare -a dirs_to_prepend
+dirs_to_prepend=(
+  "/usr/bin"
+  "/usr/local/sbin"
+  "/usr/local/git/bin"
+  "/usr/local/"
+  "/usr/local/mysql/bin"
+  "/sw/bin/"
+  "$HOME/dotfiles/bin"
+  "$HOME/bin"
+  "$HOME/.rvm/bin"
+  "$(brew --prefix ruby)/bin"
+  "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
+  "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
+)
+
+# Explicitly configured $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+for dir in ${(k)dirs_to_prepend[@]}
+do
+  if [ -d ${dir} ]; then
+    # If these directories exist, then prepend them to existing PATH
+    PATH="${dir}:$PATH"
+  fi
+done
+
+# ZSH theme
 ZSH_THEME="wezm"
 
+# Set default editor to Vim
+export EDITOR="vim"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -18,7 +44,7 @@ ZSH_THEME="wezm"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -40,7 +66,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -53,7 +79,7 @@ plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby 
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,11 +118,7 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 }
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# add scripts to path
-export PATH="$PATH:~/Projects/scripts"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
 export PATH=/usr/local/share/npm/bin:$PATH #Add npm to PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -104,10 +126,9 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/bin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/bin:$PATH
-export PATH=/Users/awerner/Library/activator-dist-1.3.10:$PATH
+export PATH=/Users/${USER}/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-v2.4/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
-export EDITOR="vim"
-export NVM_DIR="/Users/awerner/.nvm"
+export NVM_DIR="/Users/${USER}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
