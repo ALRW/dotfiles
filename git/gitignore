@@ -17,6 +17,7 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
+.idea
 
 # Tag files for ctags
 tags
