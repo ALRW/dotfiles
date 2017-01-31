@@ -1,0 +1,35 @@
+" CONFIG
+set number
+set numberwidth
+
+"highlight which line the cursor is on
+set cursorline
+set wildmenu
+set lazyredraw
+set showmatch
+set incsearch
+set hlsearch
+set ignorecase
+set backspace=indent,eol,start
+set autoindent
+set visualbell
+set mouse=a
+set autowrite
+set expandtab
+
+
+" MOVEMENT
+nnoremap j gj
+nnoremap k gk
+nnoremap E $
+nnoremap B 0
+
+" quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+let mapleader=" "
+inoremap jk <esc>:w<Enter>
+nnoremap <leader><leader> <c-^>

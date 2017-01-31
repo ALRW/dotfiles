@@ -6,7 +6,9 @@ endif
 
 " COLORSCHEME
 set background=dark
-colorscheme PerfectDark
+syntax enable
+colorscheme darcula
+
 
 " The Silver Searcher
 if executable('ag')
@@ -42,15 +44,13 @@ set wildmenu
 set lazyredraw
 " highlights matching parentheses
 set showmatch
+
 " search as characters are entered, highlight matches, ignore case except when using capitals
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-" enable syntax highlighting if the terminal has colors
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
+
 " Allow backspacing over autoindent, line breaks and start of insert auto-correction
 set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enables, keep the same indent as the line you're currently on.
@@ -112,3 +112,18 @@ inoremap jk <esc>:w<Enter>
 nnoremap <leader><leader> <c-^>
 " Map Ctrl n to open NerdTree
 map <leader>n :NERDTreeToggle<CR>
+
+
+" SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticSTatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+" ENSIME
+autocmd BufWritePost *.scala silent :EnTypeCheck

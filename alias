@@ -31,3 +31,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Kill Mongo process
+alias km="ps -ef | awk '/mongo/{print $2; exit}' | xargs kill -9"
