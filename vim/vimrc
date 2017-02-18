@@ -1,4 +1,4 @@
-"PLUGINS
+/n     UseKeyChain yes"PLUGINS
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles

@@ -75,8 +75,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby rvm zsh-syntax-highlighting)
-
+plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby rvm)
 # User configuration
 
 
@@ -129,7 +128,8 @@ export PATH=/usr/bin:$PATH
 export PATH=/$HOME/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-3.4.2/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_65`
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source $HOME/.alias
+source /Users/andrewwerner/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
