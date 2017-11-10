@@ -42,11 +42,11 @@ Plug 'tpope/vim-surround'
 Plug 'derekwyatt/vim-scala'
 Plug 'ervandew/supertab'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/rails-vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/tComment'
 Plug 'blueshirts/darcula'
+Plug 'vim-scripts/c.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
