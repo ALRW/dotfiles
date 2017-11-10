@@ -13,6 +13,10 @@
 
 --recurse=yes
 --exclude=.git
+--exclude=log/*
 --exclude=log
---languages=-javascript,sql
+--exclude=vendor/*
+--exclude=node_modules/*
+--exclude=db/*
+--exclude=target/*
 --append
