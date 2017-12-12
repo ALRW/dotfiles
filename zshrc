@@ -17,6 +17,9 @@ dirs_to_prepend=(
   "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
 )
 
+# Export path for updated version of vim
+export PATH="/opt/local/bin:$PATH"
+
 # Explicitly configured $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
