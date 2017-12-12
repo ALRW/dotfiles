@@ -20,10 +20,28 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" LEADER SHORTCUTS
+let mapleader=","
+
+" use jk to exit insert mode and write changes
+" use jj to simply <esc>
+inoremap jk <esc>:w<Enter>
+inoremap jj <esc>
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" Map Ctrl n to open NerdTree
+map <leader>n :NERDTreeToggle<CR>
+
 " Opens silver searcher in vim for easy searching
 nnoremap <leader>a :Ag
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Quickly edit and source vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " maps leader-t to show tagbar
 nmap <leader>t :TagbarToggle<CR>
@@ -103,15 +121,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" LEADER SHORTCUTS
-let mapleader=" "
-" use jk to exit insert mode and write changes
-inoremap jk <esc>:w<Enter>
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-" Map Ctrl n to open NerdTree
-map <leader>n :NERDTreeToggle<CR>
 
 
 " SYNTASTIC
