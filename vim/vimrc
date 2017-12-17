@@ -50,10 +50,9 @@ nmap <leader>t :TagbarToggle<CR>
 " show line numbers
 set number
 set numberwidth=5
+
 " highlight which line the cursor is on
 set cursorline
-" load filetype specific indent files
-filetype indent plugin on
 " visual autocomplete for command menu
 set wildmenu
 " redraw only when needed
@@ -120,7 +119,7 @@ nnoremap gV `[v`]
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+nnoremap <C-l> <C-w>v
 
 
 " SYNTASTIC
@@ -133,3 +132,18 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" enable flow types for vim javascript
+let g:javascript_plugin_flow = 1
+
+" don't restrict jsx syntax highlighting to .jsx files
+let g:jsx_ext_required = 0
+
+" Toggle Rainbow parens
+nnoremap <leader>r :RainbowToggle<CR>
+
+
+" load filetype specific indent files
+filetype indent plugin on
+
+" local file indent for Javascript
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
