@@ -7,7 +7,6 @@ set background=dark
 syntax enable
 colorscheme darcula
 
-
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
@@ -119,7 +118,7 @@ nnoremap gV `[v`]
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>v
+nnoremap <C-l> <C-w>l
 
 
 " SYNTASTIC

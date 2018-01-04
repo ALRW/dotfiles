@@ -23,6 +23,9 @@ export PATH="/opt/local/bin:$PATH"
 # Explicitly configured $PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+export TWITTER_CONSUMER_KEY="ZGebwNiey1LQnlZjL4bBDRifc"
+export TWITTER_CONSUMER_SECRET="2cAXGpi1ITNIiNQ5oyNpJFGnrePMEMatA4yhIdcT5zK04Z7mMA"
+
 for dir in ${(k)dirs_to_prepend[@]}
 do
   if [ -d ${dir} ]; then
@@ -77,11 +80,10 @@ HIST_STAMPS="dd.mm.yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
+
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby rvm)
+plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby rvm zsh-syntax-highlighting)
 # User configuration
-
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -110,15 +112,15 @@ source $ZSH/oh-my-zsh.sh
 #
 # Colorised man pages
 man() {
-	env \
-		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-		LESS_TERMCAP_md=$(printf "\e[1;31m") \
-		LESS_TERMCAP_me=$(printf "\e[0m") \
-		LESS_TERMCAP_se=$(printf "\e[0m") \
-		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-		LESS_TERMCAP_ue=$(printf "\e[0m") \
-		LESS_TERMCAP_us=$(printf "\e[1;32m") \
-			man "$@"
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+      man "$@"
 }
 
 export SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
@@ -131,10 +133,9 @@ export PATH=/usr/bin:$PATH
 export PATH=/$HOME/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-3.4.2/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_65`
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=/opt/local/bin:$PATH
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source $HOME/.alias
-source /Users/andrewwerner/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$HOME/.yarn/bin:$PATH"
