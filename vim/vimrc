@@ -120,17 +120,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-
-" SYNTASTIC
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticSTatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " enable flow types for vim javascript
 let g:javascript_plugin_flow = 1
 
@@ -138,6 +127,7 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " Toggle Rainbow parens
+let g:rainbow_active = 0
 nnoremap <leader>r :RainbowToggle<CR>
 
 
@@ -146,3 +136,4 @@ filetype indent plugin on
 
 " local file indent for Javascript
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
