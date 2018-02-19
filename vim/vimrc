@@ -1,5 +1,5 @@
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+        source ~/.vimrc.bundles
 endif
 
 " COLORSCHEME
@@ -9,14 +9,14 @@ colorscheme darcula
 
 " The Silver Searcher
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+        " Use ag over grep
+        set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+        " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+        " ag is fast enough that CtrlP doesn't need to cache
+        let g:ctrlp_use_caching = 0
 endif
 
 " LEADER SHORTCUTS
@@ -95,12 +95,12 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+        let col = col('.') - 1
+        if !col || getline('.')[col - 1] !~ '\k'
+                return "\<tab>"
+        else
+                return "\<c-p>"
+        endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
@@ -126,10 +126,27 @@ let g:javascript_plugin_flow = 1
 " don't restrict jsx syntax highlighting to .jsx files
 let g:jsx_ext_required = 0
 
+" Emmet Configuration
+let g:user_emmet_settings = {
+  \ 'javascript.jsx' : {
+    \ 'extends' : 'jsx',
+  \},
+\}
+
+" ALE tweaks for syntax highlighting
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
+let g:ale_linters = {'javascript': ['eslint']}
+
 " Toggle Rainbow parens
+<<<<<<< Updated upstream
 let g:rainbow_active = 0
 nnoremap <leader>r :RainbowToggle<CR>
-
+" cycle through grep results easily
+nmap <silent> <C-N> :cn<CR>zv
+nmap <silent> <C-M> :cp<CR>zv
 
 " load filetype specific indent files
 filetype indent plugin on
@@ -137,3 +154,5 @@ filetype indent plugin on
 " local file indent for Javascript
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype json setlocal ts=2 sw=2 expandtab

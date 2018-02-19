@@ -21,6 +21,8 @@ node_modules
 
 # Tag files for ctags
 tags
+tags.lock
+tags.temp
 
 # local git config
 .gitconfig.local

@@ -6,9 +6,10 @@ dirs_to_prepend=(
   "/usr/bin"
   "/usr/local/sbin"
   "/usr/local/git/bin"
-  "/usr/local/"
+  "/usr/local"
   "/usr/local/mysql/bin"
-  "/sw/bin/"
+  "/sw/bin"
+  "/usr/local/bin"
   "$HOME/dotfiles/bin"
   "$HOME/bin"
   "$HOME/.rvm/bin"
@@ -17,11 +18,8 @@ dirs_to_prepend=(
   "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
 )
 
-# Export path for updated version of vim
-export PATH="/opt/local/bin:$PATH"
-
 # Explicitly configured $PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
 
 export TWITTER_CONSUMER_KEY="ZGebwNiey1LQnlZjL4bBDRifc"
 export TWITTER_CONSUMER_SECRET="2cAXGpi1ITNIiNQ5oyNpJFGnrePMEMatA4yhIdcT5zK04Z7mMA"
@@ -127,14 +125,10 @@ export SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
 export PATH=/usr/local/share/npm/bin:$PATH #Add npm to PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=/usr/local/sbin:$PATH
-export PATH=/bin:$PATH
-export PATH=/sbin:$PATH
-export PATH=/usr/bin:$PATH
 export PATH=/$HOME/Library/activator-dist-1.3.10:$PATH
 export PATH=/usr/local/mongodb/mongodb-osx-x86_64-3.4.2/bin:$PATH
 export PATH=/usr/local/bin/chromedriver:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH=/opt/local/bin:$PATH
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
