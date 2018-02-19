@@ -141,7 +141,6 @@ let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 let g:ale_linters = {'javascript': ['eslint']}
 
 " Toggle Rainbow parens
-<<<<<<< Updated upstream
 let g:rainbow_active = 0
 nnoremap <leader>r :RainbowToggle<CR>
 " cycle through grep results easily
