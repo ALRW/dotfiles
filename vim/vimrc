@@ -140,9 +140,16 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 let g:ale_linters = {'javascript': ['eslint']}
 
+" Tern leader mappings
+nnoremap <leader>d :TernDef<CR>
+nnoremap <leader>t :TernType<CR>
+nnoremap <leader>D :TernDoc<CR>
+nnoremap <leader>p :TernRefs<CR>
+nnoremap <leader>r :TernRename<CR>
+
 " Toggle Rainbow parens
 let g:rainbow_active = 0
-nnoremap <leader>r :RainbowToggle<CR>
+nnoremap <leader>R :RainbowToggle<CR>
 " cycle through grep results easily
 nmap <silent> <C-N> :cn<CR>zv
 nmap <silent> <C-M> :cp<CR>zv
