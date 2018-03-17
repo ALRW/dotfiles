@@ -17,7 +17,6 @@ dirs_to_prepend=(
   "$(brew --prefix ruby)/bin"
   "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
   "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
-  "/opt/local/bin"
 )
 
 # Explicitly configured $PATH
