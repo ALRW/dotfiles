@@ -36,7 +36,6 @@ export PATH=/usr/local/bin/chromedriver:$PATH
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_51`
 
 # ZSH theme
 ZSH_THEME="wezm"
