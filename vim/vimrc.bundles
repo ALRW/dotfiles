@@ -38,7 +38,6 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'bling/vim-airline'
@@ -60,6 +59,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'tpope/vim-fireplace'
+Plug 'valloric/youcompleteme'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

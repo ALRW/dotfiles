@@ -37,6 +37,27 @@ export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
 
+########################
+### Environment Vars ###
+########################
+
+#####  API  #####
+
+export API_PAYMENT_NOTIFICATION_URL=http://api-stub:8085/worldPay/notification
+export API_PAYMENT_PENDING_URL=http://api-stub:8085/worldPayPayment/pending
+export API_PAYMENT_CANCEL_URL=http://api-stub:8085/worldPayPayment/cancel
+
+#####  DATABASE SERVICE  #####
+
+export DB_SERVICE_URL=http://db-service:8080/eue-db-service
+
+#####  WORLDPAY  #####
+
+# export WORLDPAY_URL=http://worldpay:9020/jsp/merchant/xml/paymentService.jsp
+
+export PAYMENT_URL=http://payments:3050
+export WORLDPAY_URL=http://localhost:9020
+
 # ZSH theme
 ZSH_THEME="wezm"
 

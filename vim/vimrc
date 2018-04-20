@@ -30,7 +30,7 @@ inoremap jj <esc>
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Map Ctrl n to open NerdTree
+" Map Leader n to open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
 " Opens silver searcher in vim for easy searching
@@ -41,6 +41,13 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Highlight a column when over 80 chars
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " maps leader-t to show tagbar
 nmap <leader>t :TagbarToggle<CR>
@@ -140,12 +147,12 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 let g:ale_linters = {'javascript': ['eslint']}
 
-" Tern leader mappings
-nnoremap <leader>d :TernDef<CR>
-nnoremap <leader>t :TernType<CR>
-nnoremap <leader>D :TernDoc<CR>
-nnoremap <leader>p :TernRefs<CR>
-nnoremap <leader>r :TernRename<CR>
+" Tern/YouCompleteMe leader mappings
+nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>D :YcmCompleter GetDoc<CR>
+nnoremap <leader>p :YcmCompleter GoToReferences<CR>
+nnoremap <leader>r :YcmCompleter RefactorRename<CR>
 
 " Toggle Rainbow parens
 let g:rainbow_active = 0
