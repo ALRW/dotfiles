@@ -35,8 +35,6 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Opens silver searcher in vim for easy searching
 nnoremap <leader>a :Ag
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
