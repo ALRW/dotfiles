@@ -32,11 +32,6 @@ nnoremap <leader><leader> <c-^>
 
 " Map Leader n to open NerdTree
 map <leader>n :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter *
-if argc() == 0 && !exists("s:std_in")
-        NERDTree
-endif
 
 " Opens silver searcher in vim for easy searching
 nnoremap <leader>a :Ag
