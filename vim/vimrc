@@ -32,6 +32,8 @@ nnoremap <leader><leader> <c-^>
 
 " Map Leader n to open NerdTree
 map <leader>n :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Opens silver searcher in vim for easy searching
 nnoremap <leader>a :Ag
@@ -158,6 +160,10 @@ nnoremap <leader>R :RainbowToggle<CR>
 " cycle through grep results easily
 nmap <silent> <C-N> :cn<CR>zv
 nmap <silent> <C-M> :cp<CR>zv
+
+" Vim hardtime: to stop me from just holding down the j and k keys
+let g:hardtime_default_on = 1
+nmap <leader>h :HardTimeToggle<CR>
 
 " load filetype specific indent files
 filetype indent plugin on
