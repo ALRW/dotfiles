@@ -122,6 +122,9 @@ man() {
       man "$@"
 }
 
-source $HOME/.alias
-source $HOME/.localVars
-
+if [ -f $HOME/.alias ]; then
+        source $HOME/.alias
+fi
+if [ -f $HOME/.localVars ]; then
+        source $HOME/.localVars
+fi
