@@ -34,7 +34,13 @@ nnoremap <leader><leader> <c-^>
 map <leader>n :NERDTreeToggle<CR>
 
 " Opens silver searcher in vim for easy searching
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag<CR>
+
+" Opens file search using fzf
+nnoremap <leader>f :Files<CR>
+
+" Quickly open a vertical split
+nnoremap <leader>v :vsp<CR>
 
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -54,6 +60,9 @@ nmap <leader>t :TagbarToggle<CR>
 " show line numbers
 set number
 set numberwidth=5
+
+" keep some context visible when moving up and down pages
+set scrolloff=10
 
 " highlight which line the cursor is on
 set cursorline
