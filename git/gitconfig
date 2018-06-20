@@ -37,5 +37,3 @@
   rebase = true
 [init]
   templatedir = ~/.git-templates
-[user]
-  name = ALRW
