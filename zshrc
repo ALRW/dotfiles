@@ -10,13 +10,11 @@ dirs_to_prepend=(
   "/usr/local/mysql/bin"
   "/sw/bin"
   "/usr/local/bin"
+  "$HOME/.cargo/bin"
   "$HOME/dotfiles/bin"
   "$HOME/bin"
   "$HOME/.rvm/bin"
   "$HOME/.yarn/bin"
-  "$(brew --prefix ruby)/bin"
-  "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
-  "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
 )
 
 # Explicitly configured $PATH
@@ -81,7 +79,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower git brew bundle common-aliases git-extras history jsontools ruby rvm zsh-syntax-highlighting)
+plugins=(bower git bundle common-aliases git-extras history jsontools ruby rvm z zsh-syntax-highlighting)
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -102,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-. `brew --prefix`/etc/profile.d/z.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -128,3 +125,5 @@ fi
 if [ -f $HOME/.localVars ]; then
         source $HOME/.localVars
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
