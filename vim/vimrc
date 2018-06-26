@@ -39,11 +39,21 @@ nnoremap <leader>a :Ag<CR>
 " Opens file search using fzf
 nnoremap <leader>f :Files<CR>
 
+" Opens tags to search using fzf
+nnoremap <leader>t :Tags<CR>
+
+" Searches tags in buffer using fzf
+nnoremap <leader>T :BTags<CR>
+
 " Quickly open a vertical split
 nnoremap <leader>v :vsp<CR>
 
+" format clojure code 
+nnoremap <leader>F :Cljfmt<CR>
+
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>eb :e ~/.vimrc.bundles<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Highlight a column when over 80 chars
@@ -53,13 +63,13 @@ else
         au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
-" maps leader-t to show tagbar
-nmap <leader>t :TagbarToggle<CR>
-
 " CONFIG
 " show line numbers
 set number
 set numberwidth=5
+
+" tell vim to look for ctags index file in the source directory
+set tags=tags
 
 " keep some context visible when moving up and down pages
 set scrolloff=10
@@ -156,7 +166,6 @@ let g:ale_linters = {'javascript': ['eslint']}
 
 " Tern/YouCompleteMe leader mappings
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>t :YcmCompleter GetType<CR>
 nnoremap <leader>D :YcmCompleter GetDoc<CR>
 nnoremap <leader>p :YcmCompleter GoToReferences<CR>
 nnoremap <leader>r :YcmCompleter RefactorRename<CR>
