@@ -79,7 +79,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower git bundle common-aliases git-extras history jsontools ruby rvm z zsh-syntax-highlighting)
+plugins=(bower git bundle common-aliases git-extras history jsontools ruby rvm z zsh-autosuggestions zsh-syntax-highlighting)
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -118,6 +118,22 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
       man "$@"
 }
+
+# Easily add previous command to pet snippets
+function prev() {
+        PREV=$(fc -lrn | head -n 1)
+        sh -c "pet new `printf %q "$PREV"`"
+}
+
+# User CTRL-S to easily back search through pet commands
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N pet-select
+stty -ixon
+bindkey '^s' pet-select
 
 if [ -f $HOME/.alias ]; then
         source $HOME/.alias

@@ -1,0 +1,34 @@
+[[snippets]]
+  description = "Add a new RabbitMQ user"
+  command = "rabbitmqctl add_user <user> <pw>"
+  output = ""
+
+[[snippets]]
+  description = "Create a new RabbitMQ admin user with full permissions"
+  command = "rabbitmqctl add_user <user> <password> && rabbitmqctl set_user <user> administrator && rabbitmqctl set_permissions -p / <user> \".*\" \".*\" \".*\""
+  output = ""
+
+[[snippets]]
+  description = "Make a RabbitMQ virtual host and set permissions"
+  command = "rabbitmqctl add_vhost <vhost-name=Some_Virtual_Host> && set_permissions -p  <vhost-name=Some_Virtual_Host> <user=guest> \".*\" \".*\" \".*\""
+  output = ""
+
+[[snippets]]
+  description = "Create a RabbitMQ exchange"
+  command = "rabbitmqadmin declare exchange --vhost=<vhost-name=Some_Virtual_Host> name=<exchange-name=some_exchange> type=direct"
+  output = ""
+
+[[snippets]]
+  description = "Create a RabbitMQ queue"
+  command = "rabbitmqadmin declare queue --vhost=<vhost-name=Some_Virtual_Host> name=<queue-name=some_outgoing_queue> durable=true"
+  output = ""
+
+[[snippets]]
+  description = "Publish a message to a rabbitmq exchange"
+  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> publish exchange=<exchange=some_exchange> routing_key=<routing-key=some_routing_key> payload=<payload=\"Hello world\">"
+  output = ""
+
+[[snippets]]
+  description = "Bind a queue to an exchange"
+  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> declare binding source=<exchange-name=some_exhange> destination_type=queue destination=<queue-name=some_outgoing_queue> routing_key=<routing-key=some_routing_key>"
+  output = ""
