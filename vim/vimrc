@@ -49,6 +49,7 @@ nnoremap <leader>T :BTags<CR>
 nnoremap <leader>v :vsp<CR>
 
 " format clojure code 
+let g:clj_fmt_autosave = 0
 nnoremap <leader>F :Cljfmt<CR>
 
 " Quickly edit and source vimrc
