@@ -10,7 +10,7 @@
 
 [[snippets]]
   description = "Make a RabbitMQ virtual host and set permissions"
-  command = "rabbitmqctl add_vhost <vhost-name=Some_Virtual_Host> && set_permissions -p  <vhost-name=Some_Virtual_Host> <user=guest> \".*\" \".*\" \".*\""
+  command = "rabbitmqctl add_vhost <vhost-name=Some_Virtual_Host> && rabbitmqctl set_permissions -p  <vhost-name=Some_Virtual_Host> <user=guest> \".*\" \".*\" \".*\""
   output = ""
 
 [[snippets]]
@@ -30,7 +30,7 @@
 
 [[snippets]]
   description = "Bind a queue to an exchange"
-  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> declare binding source=<exchange-name=some_exhange> destination_type=queue destination=<queue-name=some_outgoing_queue> routing_key=<routing-key=some_routing_key>"
+  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> declare binding source=<exchange-name=some_exchange> destination_type=queue destination=<queue-name=some_outgoing_queue> routing_key=<routing-key=some_routing_key>"
   output = ""
 
 [[snippets]]
@@ -41,4 +41,14 @@
 [[snippets]]
   description = "List items held on a particular RabbitMQ queue"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> get queue=<queue-name=some_outgoing_queue> count=<how-many-items=3>"
+  output = ""
+
+[[snippets]]
+  description = "Delete a RabbitMQ queue on a particular vhost"
+  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> delete queue name=<queue-name=some_incoming_queue>"
+  output = ""
+
+[[snippets]]
+  description = "Find and kill a running process"
+  command = "ps -ef | grep <process-to-kill> | grep -v grep | awk '{print $2}' | xargs kill -9"
   output = ""
