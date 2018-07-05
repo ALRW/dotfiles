@@ -32,3 +32,13 @@
   description = "Bind a queue to an exchange"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> declare binding source=<exchange-name=some_exhange> destination_type=queue destination=<queue-name=some_outgoing_queue> routing_key=<routing-key=some_routing_key>"
   output = ""
+
+[[snippets]]
+  description = "List the RabbitMQ queues present on a particular virtual host"
+  command = "rabbitmqctl --vhost=<vhost-name=Some_Virtual_Host> list_queues"
+  output = ""
+
+[[snippets]]
+  description = "List items held on a particular RabbitMQ queue"
+  command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> get queue=<queue-name=some_outgoing_queue> count=<how-many-items=3>"
+  output = ""
