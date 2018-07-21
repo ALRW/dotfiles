@@ -1,54 +1,59 @@
 [[snippets]]
-  description = "Add a new RabbitMQ user"
+  description = "[RMQ] Add a new RabbitMQ user"
   command = "rabbitmqctl add_user <user> <pw>"
   output = ""
 
 [[snippets]]
-  description = "Create a new RabbitMQ admin user with full permissions"
+  description = "[RMQ] Create a new RabbitMQ admin user with full permissions"
   command = "rabbitmqctl add_user <user> <password> && rabbitmqctl set_user <user> administrator && rabbitmqctl set_permissions -p / <user> \".*\" \".*\" \".*\""
   output = ""
 
 [[snippets]]
-  description = "Make a RabbitMQ virtual host and set permissions"
+  description = "[RMQ] Make a RabbitMQ virtual host and set permissions"
   command = "rabbitmqctl add_vhost <vhost-name=Some_Virtual_Host> && rabbitmqctl set_permissions -p  <vhost-name=Some_Virtual_Host> <user=guest> \".*\" \".*\" \".*\""
   output = ""
 
 [[snippets]]
-  description = "Create a RabbitMQ exchange"
+  description = "[RMQ] Create a RabbitMQ exchange"
   command = "rabbitmqadmin declare exchange --vhost=<vhost-name=Some_Virtual_Host> name=<exchange-name=some_exchange> type=direct"
   output = ""
 
 [[snippets]]
-  description = "Create a RabbitMQ queue"
+  description = "[RMQ] Create a RabbitMQ queue"
   command = "rabbitmqadmin declare queue --vhost=<vhost-name=Some_Virtual_Host> name=<queue-name=some_outgoing_queue> durable=true"
   output = ""
 
 [[snippets]]
-  description = "Publish a message to a rabbitmq exchange"
+  description = "[RMQ] Publish a message to a rabbitmq exchange"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> publish exchange=<exchange=some_exchange> routing_key=<routing-key=some_routing_key> payload=<payload=\"Hello world\">"
   output = ""
 
 [[snippets]]
-  description = "Bind a queue to an exchange"
+  description = "[RMQ] Bind a queue to an exchange"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> declare binding source=<exchange-name=some_exchange> destination_type=queue destination=<queue-name=some_outgoing_queue> routing_key=<routing-key=some_routing_key>"
   output = ""
 
 [[snippets]]
-  description = "List the RabbitMQ queues present on a particular virtual host"
+  description = "[RMQ] List the RabbitMQ queues present on a particular virtual host"
   command = "rabbitmqctl --vhost=<vhost-name=Some_Virtual_Host> list_queues"
   output = ""
 
 [[snippets]]
-  description = "List items held on a particular RabbitMQ queue"
+  description = "[RMQ] List items held on a particular RabbitMQ queue"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> get queue=<queue-name=some_outgoing_queue> count=<how-many-items=3>"
   output = ""
 
 [[snippets]]
-  description = "Delete a RabbitMQ queue on a particular vhost"
+  description = "[RMQ] Delete a RabbitMQ queue on a particular vhost"
   command = "rabbitmqadmin --vhost=<vhost-name=Some_Virtual_Host> delete queue name=<queue-name=some_incoming_queue>"
   output = ""
 
 [[snippets]]
   description = "Find and kill a running process"
   command = "ps -ef | grep <process-to-kill> | grep -v grep | awk '{print $2}' | xargs kill -9"
+  output = ""
+
+[[snippets]]
+  description = "[awk] output non-empty lines from a file; remove any lines that contain a particular pattern; sum the values in columns; print the totals"
+  command = "grep . <filename> | grep -v '<remove-lines-with-pattern>' | awk '{s+=<column-to-variable=$3>; r+=<other-column-to-variable=$5>} END {print s; print r}'"
   output = ""
