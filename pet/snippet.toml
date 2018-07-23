@@ -57,3 +57,8 @@
   description = "[awk] output non-empty lines from a file; remove any lines that contain a particular pattern; sum the values in columns; print the totals"
   command = "grep . <filename> | grep -v '<remove-lines-with-pattern>' | awk '{s+=<column-to-variable=$3>; r+=<other-column-to-variable=$5>} END {print s; print r}'"
   output = ""
+
+[[snippets]]
+  description = "[macos] Restart video utilities on OS X (for when camera is on but video is black)"
+  command = "sudo killall VDCAssistant && sudo killall AppleCameraAssistant"
+  output = ""

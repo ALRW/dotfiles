@@ -4,7 +4,9 @@ brew install htop
 brew install joker
 brew install leiningen
 brew install maven
-brew install pet
+brew install knqyf263/pet/pet
 brew install the_silver_searcher
 brew install tree
 brew install vim --override-system-vim
+brew install jq
+brew install fzf
