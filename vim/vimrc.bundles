@@ -42,10 +42,7 @@ Plug 'w0rp/ale'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'bling/vim-airline'
@@ -57,6 +54,7 @@ Plug 'luochen1990/rainbow'
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'jpalardy/vim-slime'
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM'), 'for': ['javascript', 'jsx', 'javascript.jsx'] }
 Plug 'takac/vim-hardtime', { 'for': ['javascript', 'jsx', 'javascript.jsx', 'c', 'ruby', 'clojure']}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
