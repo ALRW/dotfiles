@@ -62,3 +62,18 @@
   description = "[macos] Restart video utilities on OS X (for when camera is on but video is black)"
   command = "sudo killall VDCAssistant && sudo killall AppleCameraAssistant"
   output = ""
+
+[[snippets]]
+  description = "Add a meaningful name to the screen session"
+  command = "screen -S <session-name=SCREEN_NAME>"
+  output = ""
+
+[[snippets]]
+  description = "Get the <pid>.<session-name> for the current session with controlling terminal"
+  command = "screen -ls | grep Attached | cut -f2"
+  output = ""
+
+[[snippets]]
+  description = "Send a specified command to the running screen instance (in this case wait for input to be sent from vim-slime)"
+  command = "screen -X eval <command=\"msgwait 0\">"
+  output = ""

@@ -13,6 +13,9 @@ Thumbs.db
 # Compiled Python files
 *.pyc
 
+# Clojure build stuff
+.cpcache
+
 # Application specific files
 venv
 node_modules
