@@ -64,16 +64,21 @@
   output = ""
 
 [[snippets]]
-  description = "Add a meaningful name to the screen session"
+  description = "[screen] Add a meaningful name to the screen session"
   command = "screen -S <session-name=SCREEN_NAME>"
   output = ""
 
 [[snippets]]
-  description = "Get the <pid>.<session-name> for the current session with controlling terminal"
-  command = "screen -ls | grep Attached | cut -f2"
+  description = "[screen] Get the <pid>.<session-name> for the current session with controlling terminal and copy to clipboard"
+  command = "screen -ls | grep Attached | cut -f2 | pbcopy"
   output = ""
 
 [[snippets]]
-  description = "Send a specified command to the running screen instance (in this case wait for input to be sent from vim-slime)"
+  description = "[screen] Send a specified command to the running screen instance (in this case wait for input to be sent from vim-slime)"
   command = "screen -X eval <command=\"msgwait 0\">"
+  output = ""
+
+[[snippets]]
+  description = "Run defrost for csv list of topics"
+  command = "sudo docker run -ti quay.io/fundingcircle/defrost /configure-and-start.sh -t allocation-settings-updated,bilcas-available-balance-updated,funding-channel-failed-allocation,funding-channel-failed-concentration-v3,funding-channel-failed-eligibility-v2,funding-channel-passed-concentration-v3,funding-channel-passed-eligibility-v2,funding-channel-rule-tested,funding-channel-updated,funding-channel-updated-v3,funding-channels,listing-allocated,listing-cancelled,listing-created-v2,listing-randomly-allocated-to-funding-channel,product-created,product-unit-payment-made,product-unit-traded"
   output = ""
