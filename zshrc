@@ -135,11 +135,6 @@ zle -N pet-select
 stty -ixon
 bindkey '^s' pet-select
 
-if [ -f $HOME/.alias ]; then
-        source $HOME/.alias
-fi
-if [ -f $HOME/.localVars ]; then
-        source $HOME/.localVars
-fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.alias ] && source $HOME/.alias
+[ -f $HOME/.localVars ] && source $HOME/.localVars
+[ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
