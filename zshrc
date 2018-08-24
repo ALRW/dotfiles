@@ -20,12 +20,9 @@ dirs_to_prepend=(
 # Explicitly configured $PATH
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
 
-for dir in ${(k)dirs_to_prepend[@]}
-do
-  if [ -d ${dir} ]; then
-    # If these directories exist, then prepend them to existing PATH
-    PATH="${dir}:$PATH"
-  fi
+for dir in ${(k)dirs_to_prepend[@]}; do
+  # If these directories exist, then prepend them to existing PATH
+  [ -d ${dir} ] && PATH="${dir}:$PATH"
 done
 
 export NVM_DIR="${HOME}/.nvm"
