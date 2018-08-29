@@ -82,3 +82,8 @@
   description = "Run defrost for csv list of topics"
   command = "sudo docker run -ti quay.io/fundingcircle/defrost /configure-and-start.sh -t allocation-settings-updated,bilcas-available-balance-updated,funding-channel-failed-allocation,funding-channel-failed-concentration-v3,funding-channel-failed-eligibility-v2,funding-channel-passed-concentration-v3,funding-channel-passed-eligibility-v2,funding-channel-rule-tested,funding-channel-updated,funding-channel-updated-v3,funding-channels,listing-allocated,listing-cancelled,listing-created-v2,listing-randomly-allocated-to-funding-channel,product-created,product-unit-payment-made,product-unit-traded"
   output = ""
+
+[[snippets]]
+  description = "[repl] Copy screen PID to clipboard, set screen session to evaluate input and open a new repl"
+  command = "screen -ls | grep Attached | cut -f2 | pbcopy && screen -X eval <command=\"msgwait 0\"> && lein repl"
+  output = ""
