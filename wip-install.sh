@@ -10,3 +10,4 @@ brew install tree
 brew install vim --override-system-vim
 brew install jq
 brew install fzf
+brew install wifi-password
