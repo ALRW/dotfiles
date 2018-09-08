@@ -52,8 +52,21 @@ fi
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
-
 for ((i = 0; i < ${#packages[@]}; i++)); do
         brewInstall ${packages[$i]}
 done
+
+# Create symbolic links for all dotfiles
+ln -s ./alias ~/.alias
+ln -s ./ctags ~/.ctags
+ln -s ./profiles.clj ~/.lein/profiles.clj
+ln -s ./tern-config ~/.tern-config
+ln -s ./zshrc ~/.zshrc
+ln -s ./vim/vimrc ~/.vimrc
+ln -s ./vim/vimrc.bundles ~/.vimrc.bundles
+ln -s ./vim/ideavimrc ~/.ideavimrc
+ln -s ./pet/snippet.toml ~/.snippet.toml
+ln -s ./git/gitconfig ~/.gitconfig
+ln -s ./git/gitignore ~/.gitignore
+
+# TODO Write script to create .gitconfig.local file with user and email
