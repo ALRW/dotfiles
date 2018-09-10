@@ -3,19 +3,15 @@ DOTFILES
 
 Current base system setup. Feel free to take and use whatever is useful.
 
-To install, rake is required
+Installation is very much in :construction:
 
-```
-gem install rake
-```
-
-The install script currently symlinks all top level files and those in the git and vim folders. To run the installation:
-
-```
-git clone https://github.com/ALRW/dotfiles.git && cd dotfiles && rake install
+Make sure you can run the install script
+```sh
+chmod 777 wip-install.sh
 ```
 
-To do
------------
-- Update script to traverse through all folders and files within the dotfiles repo without having to manually add them to the script
-- Add Mac specific configs
+
+Running the install script
+```
+./wip-install.sh
+```
