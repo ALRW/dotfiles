@@ -5,32 +5,46 @@
 
 # The following are helper functions and data structures used by the script
 brewInstall () {
-        echo "Installing: $1 with brew"
+        echo "Installing: $1"
         brew install $1
 }
+
+caskInstall () {
+        echo "Installing: $1"
+        brew cask install --appdir="/Applications" $1
+}
+
 # Function to check if a command exists and exit otherwise
 checkExists () {
         command $1 >/dev/null 2>&1 ||
                 { echo >&2 "ERROR: $1 required but not installed"; exit 1;}
-}
+        }
 
 declare -a packages
 packages=(
-  "ctags"
-  "htop"
-  "joker"
-  "leiningen"
-  "maven"
-  "knqyf263/pet/pet"
-  "the_silver_searcher"
-  "tree"
-  "vim --override-system-vim"
-  "jq"
-  "fzf"
-  "wifi-password"
-  "node"
-  "sbt"
-  "postgresql"
+"ctags"
+"htop"
+"joker"
+"leiningen"
+"maven"
+"knqyf263/pet/pet"
+"the_silver_searcher"
+"tree"
+"vim --override-system-vim"
+"jq"
+"fzf"
+"wifi-password"
+"node"
+"sbt"
+"postgresql"
+)
+
+declare -a casks
+casks=(
+"slack"
+"alfred"
+"postman"
+"google-chrome"
 )
 
 # The actuall installation script
@@ -59,8 +73,14 @@ fi
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install packages
 for ((i = 0; i < ${#packages[@]}; i++)); do
         brewInstall ${packages[$i]}
+done
+
+# Install casks
+for ((i = 0; i < ${#casks[@]}; i++)); do
+        caskInstall ${casks[$i]}
 done
 
 # Create symbolic links for all dotfiles
@@ -77,4 +97,4 @@ ln -s ./git/gitconfig ~/.gitconfig
 ln -s ./git/gitignore ~/.gitignore
 
 # TODO Write script to create .gitconfig.local file with user and email
-# TODO Mkae each phase of the installation user defined
+# TODO Make each phase of the installation user defined
