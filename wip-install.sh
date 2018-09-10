@@ -35,8 +35,15 @@ packages=(
 
 # The actuall installation script
 
-# Install the apple developer command line tools
-xcode-select install
+# Install the apple developer command line tools prompt
+echo "Welcome to the worlds best Install Script"
+echo "========================================="
+printf "\n\n"
+echo "Before continuing please ensure that you have the Apple Command-line tools installed"
+echo "Hint: run 'xcode-select install'"
+printf "\n\n"
+read -p "Press any key to continue" -n1 -s
+printf "\n\n"
 
 # Install rvm
 if checkExists curl; then
@@ -70,3 +77,4 @@ ln -s ./git/gitconfig ~/.gitconfig
 ln -s ./git/gitignore ~/.gitignore
 
 # TODO Write script to create .gitconfig.local file with user and email
+# TODO Mkae each phase of the installation user defined
