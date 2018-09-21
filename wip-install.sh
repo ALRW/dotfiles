@@ -37,6 +37,8 @@ packages=(
 "node"
 "sbt"
 "postgresql"
+"bat"
+"diff-so-fancy"
 )
 
 declare -a casks
