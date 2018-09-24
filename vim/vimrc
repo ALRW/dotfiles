@@ -183,11 +183,3 @@ nmap <silent> <C-M> :cp<CR>zv
 let g:hardtime_default_on = 1
 nmap <leader>h :HardTimeToggle<CR>
 
-" load filetype specific indent files
-filetype indent plugin on
-
-" local file indent for Javascript
-autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype json setlocal ts=2 sw=2 expandtab
