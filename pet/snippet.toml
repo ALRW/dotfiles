@@ -70,7 +70,7 @@
 
 [[snippets]]
   description = "[screen] Get the <pid>.<session-name> for the current session with controlling terminal and copy to clipboard"
-  command = "screen -ls | grep Attached | cut -f2 | pbcopy"
+  command = "screen -ls | grep Attached | cut -f2 | tr -d '\n' | pbcopy"
   output = ""
 
 [[snippets]]
