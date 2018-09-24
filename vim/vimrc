@@ -111,6 +111,7 @@ nnoremap <leader>l :nohl<CR><C-l>
 " SPACES AND TABS
 " number of visual spaces per tab
 set tabstop=2
+set shiftwidth=2
 " converts tabs to spaces
 set expandtab
 " display extra whitespace
