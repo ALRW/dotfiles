@@ -39,6 +39,7 @@ packages=(
 "postgresql"
 "bat"
 "diff-so-fancy"
+"confluent-oss"
 )
 
 declare -a casks
