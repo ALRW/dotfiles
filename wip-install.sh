@@ -40,6 +40,7 @@ packages=(
 "bat"
 "diff-so-fancy"
 "confluent-oss"
+"git-crypt"
 )
 
 declare -a casks
