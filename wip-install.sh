@@ -5,20 +5,20 @@
 
 # The following are helper functions and data structures used by the script
 brewInstall () {
-        echo "Installing: $1"
-        brew install $1
+  echo "Installing: $1"
+  brew install $1
 }
 
 caskInstall () {
-        echo "Installing: $1"
-        brew cask install --appdir="/Applications" $1
+  echo "Installing: $1"
+  brew cask install --appdir="/Applications" $1
 }
 
 # Function to check if a command exists and exit otherwise
 checkExists () {
-        command $1 >/dev/null 2>&1 ||
-                { echo >&2 "ERROR: $1 required but not installed"; exit 1;}
-        }
+  command $1 >/dev/null 2>&1 ||
+    { echo >&2 "ERROR: $1 required but not installed"; exit 1;}
+  }
 
 declare -a packages
 packages=(
@@ -65,13 +65,18 @@ printf "\n\n"
 
 # Install rvm
 if checkExists curl; then
-        curl -sSL https://get.rvm.io | bash;
+  echo "Installing RVM"
+  curl -sSL https://get.rvm.io | sh
 fi
+
+# Install Rust
+curl -sSf https://sh.rustup.rs | sh
 
 # If we have rvm then upgrade to the latest version of ruby
 if checkExists rvm; then
-        rvm install ruby --latest;
-        rvm use --default --latest;
+  echo "Installing lastest Ruby"
+  rvm install ruby --latest
+  rvm use --default --latest
 fi
 
 # Install Homebrew
@@ -79,12 +84,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # Install packages
 for ((i = 0; i < ${#packages[@]}; i++)); do
-        brewInstall ${packages[$i]}
+  brewInstall ${packages[$i]}
 done
 
 # Install casks
 for ((i = 0; i < ${#casks[@]}; i++)); do
-        caskInstall ${casks[$i]}
+  caskInstall ${casks[$i]}
 done
 
 # Create symbolic links for all dotfiles
