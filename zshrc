@@ -152,3 +152,6 @@ bindkey '^s' pet-select
 [ -f $HOME/.alias ] && source $HOME/.alias
 [ -f $HOME/.localVars ] && source $HOME/.localVars
 [ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
