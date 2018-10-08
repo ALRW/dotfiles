@@ -41,6 +41,8 @@ packages=(
 "diff-so-fancy"
 "confluent-oss"
 "git-crypt"
+"consul"
+"vault"
 )
 
 declare -a casks
