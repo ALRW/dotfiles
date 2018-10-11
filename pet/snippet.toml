@@ -87,3 +87,18 @@
   description = "[repl] Copy screen PID to clipboard, set screen session to evaluate input and open a new repl"
   command = "screen -ls | grep Attached | cut -f2 | pbcopy && screen -X eval <command=\"msgwait 0\"> && lein repl"
   output = ""
+
+[[snippets]]
+  description = "[vault] setup a relatively insecure vault server for local development"
+  command = "vault server -dev"
+  output = ""
+
+[[snippets]]
+  description = "[vault] enable the transit secrets engine for vault"
+  command = "vault secrets enable transit"
+  output = ""
+
+[[snippets]]
+  description = "[vault] Create an transit encryption key-ring"
+  command = "vault write -f transit/keys/<encryption-key-ring=key>"
+  output = ""
