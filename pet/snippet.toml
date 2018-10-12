@@ -102,3 +102,13 @@
   description = "[vault] Create an transit encryption key-ring"
   command = "vault write -f transit/keys/<encryption-key-ring=key>"
   output = ""
+
+[[snippets]]
+  description = "[RMQ] show available queues"
+  command = "rabbitmqadmin list queues"
+  output = ""
+
+[[snippets]]
+  description = "[RMQ] show available exchanges"
+  command = "rabbitmqadmin list exchanges"
+  output = ""
