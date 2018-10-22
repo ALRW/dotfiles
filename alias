@@ -30,3 +30,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Use brew ctags
 alias ctags="`brew --prefix`/bin/ctags"
+
+# copy snippet to clipboard easily
+alias psp="pet search | pbcopy"
