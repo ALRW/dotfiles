@@ -115,7 +115,7 @@
 
 [[snippets]]
   description = "[Kafka] Consume from the beginning of a particular Avro encoded topic"
-  command = "kafka-avro-console-consumer --bootstrap-server <bootstrap-server=kafka.service.consul:9092> --property schema.registry.url=<schema-registry=http://schema-registry.service.consul> --topic <topic=loan-application-transformed-v2> --from-beginning --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property print.key=true"
+  command = "kafka-avro-console-consumer --bootstrap-server <bootstrap-server=kafka.service.consul>:9092 --property schema.registry.url=<schema-registry=http://schema-registry.service.consul> --topic <topic=loan-application-transformed-v2> --from-beginning --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property print.key=true"
   output = ""
 
 [[snippets]]
@@ -125,15 +125,15 @@
 
 [[snippets]]
   description = "[Kafka] List kafka topics"
-  command = "kafka-topics --zookeeper <zookeeper=localhost:2181> --list"
+  command = "kafka-topics --zookeeper <zookeeper=localhost>:2181 --list"
   output = ""
 
 [[snippets]]
   description = "[Kafka] Delete a topic"
-  command = "kafka-topics --zookeeper <zookeeper=localhost:2181> --delete --topic <topic-name>"
+  command = "kafka-topics --zookeeper <zookeeper=localhost>:2181 --delete --topic <topic-name>"
   output = ""
 
 [[snippets]]
   description = "[Kafka] Create a new topic"
-  command = "kafka-topics --create --zookeeper <zookeeper=localhost>:2181 --replication-factor <replication-factor=15> --partitions <partitions=3> --topic <topic_name>"
+  command = "kafka-topics --create --zookeeper <zookeeper=localhost>:2181 --replication-factor <replication-factor=3> --partitions <partitions=15> --topic <topic_name>"
   output = ""
