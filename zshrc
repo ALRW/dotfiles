@@ -119,13 +119,31 @@ man() {
 # Use fo to search and preview files with fzf and bat then use ctrl-o to run 'open' or Enter/ctrl-e to open in editor
 function fo() {
   local out file key
-  IFS=$'\n' out=($(ag -l | fzf-tmux --preview "bat --color 'always' {}" --exit-0 --expect=ctrl-o,ctrl-e))
+  IFS=$'\n' out=($(ag -l | fzf-tmux --preview "bat --color 'always' {}" --preview-window=right:60%:wrap --exit-0 --expect=ctrl-o,ctrl-e))
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
   if [ -n "$file" ]; then
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
+
+fuz() (
+  main() {
+    previous_file="$1"
+    file_to_edit=`select_file $previous_file`
+    if [ -n "$file_to_edit" ]; then
+      "$EDITOR" "$file_to_edit"
+      main "file_to_edit"
+    fi
+  }
+
+  select_file() {
+    given_file="$1"
+    fzf --preview="bat --color 'always' {}" --preview-window=right:60%:wrap --query="$given_file"
+  }
+
+main ""
+)
 
 # Like normal z but displays fzf search when used without arguments
 unalias z 2> /dev/null
