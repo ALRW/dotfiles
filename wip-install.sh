@@ -26,6 +26,7 @@ packages=(
 "htop"
 "joker"
 "leiningen"
+"clojure"
 "maven"
 "knqyf263/pet/pet"
 "the_silver_searcher"
