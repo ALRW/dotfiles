@@ -117,9 +117,9 @@ man() {
 }
 
 # Use fo to search and preview files with fzf and bat then use ctrl-o to run 'open' or Enter/ctrl-e to open in editor
-function fo() {
+fo() {
   local out file key
-  IFS=$'\n' out=($(ag -l | fzf-tmux --preview "bat --color 'always' {}" --preview-window=right:60%:wrap --exit-0 --expect=ctrl-o,ctrl-e))
+  IFS=$'\n' out=($(ag -l | fzf-tmux --preview "bat --color 'always' {}" --preview-window=right:60% --exit-0 --expect=ctrl-o,ctrl-e))
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
   if [ -n "$file" ]; then
@@ -139,7 +139,7 @@ fuz() (
 
   select_file() {
     given_file="$1"
-    fzf --preview="bat --color 'always' {}" --preview-window=right:60%:wrap --query="$given_file"
+    fzf --preview="bat --color 'always' {}" --preview-window=right:60% --query="$given_file"
   }
 
 main ""
@@ -147,18 +147,18 @@ main ""
 
 # Like normal z but displays fzf search when used without arguments
 unalias z 2> /dev/null
-function z() {
+z() {
   [ $# -gt 0 ] && _z "$*" && return
   cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 # Easily add previous command to pet snippets
-function prev() {
+prev() {
   PREV=$(fc -lrn | head -n 1)
   sh -c "pet new `printf %q "$PREV"`"
 }
 
 # User CTRL-S to easily back search through pet commands
-function pet-select() {
+pet-select() {
   BUFFER=$(pet search --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle redisplay
