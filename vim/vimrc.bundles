@@ -61,6 +61,9 @@ Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'jpalardy/vim-slime'
+Plug 'ryanoasis/vim-devicons'
+Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'ts']}
+Plug 'quramy/tsuquyomi', {'for': ['typescript', 'ts']}
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM'), 'for': ['javascript', 'jsx', 'javascript.jsx'] }
 Plug 'takac/vim-hardtime', { 'for': ['javascript', 'jsx', 'javascript.jsx', 'c', 'ruby', 'clojure']}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
