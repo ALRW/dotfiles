@@ -137,3 +137,63 @@
   description = "[Kafka] Create a new topic"
   command = "kafka-topics --create --zookeeper <zookeeper=localhost>:2181 --replication-factor <replication-factor=3> --partitions <partitions=15> --topic <topic_name>"
   output = ""
+
+[[snippets]]
+  description = "[clasp] create a new google app script"
+  command = "clasp create <new-script-title>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] clone an existing app script project into the current directory"
+  command = "clasp clone <scriptId>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] creates an immutable version of the script that can be deployed"
+  command = "clasp version <description>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] deploy a version of your script to Gsuite"
+  command = "clasp deploy <version> <description>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] undeploy the selected script"
+  command = "clasp undeploy <deploymentId>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] updates an existing deployment with a new version and description"
+  command = "clasp redeploy <deploymentId> <version> <description>"
+  output = ""
+
+[[snippets]]
+  description = "[clasp] opens the script in the Apps Scripts editor (editor is launched as a new tab in the default browser)"
+  command = "clasp open"
+  output = ""
+
+[[snippets]]
+  description = "[warp] Create new warp"
+  command = "warp open <name>"
+  output = ""
+
+[[snippets]]
+  description = "[warp] connect to a warp"
+  command = "warp connect <name>"
+  output = ""
+
+[[snippets]]
+  description = "[warp] from inside a warp retreive the list of connected users"
+  command = "warp state"
+  output = ""
+
+[[snippets]]
+  description = "[warp] give write access to a warp user"
+  command = "warp authorize <username>"
+  output = ""
+
+[[snippets]]
+  description = "[warp] revoke write access to a warp user"
+  command = "warp revoke <username>"
+  output = ""
