@@ -44,6 +44,7 @@ packages=(
 "git-crypt"
 "consul"
 "vault"
+"cmake"
 )
 
 declare -a casks

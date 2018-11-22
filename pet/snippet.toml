@@ -197,3 +197,8 @@
   description = "[warp] revoke write access to a warp user"
   command = "warp revoke <username>"
   output = ""
+
+[[snippets]]
+  description = "[clojure] check for outdated dependencies in a project using deps.edn"
+  command = "clojure -Sdeps '{:deps {olical/depot {:mvn/version \"1.5.0\"}}}' -m depot.outdated.main"
+  output = ""
