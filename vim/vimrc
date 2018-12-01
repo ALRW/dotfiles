@@ -6,6 +6,7 @@ endif
 set background=dark
 syntax enable
 colorscheme darcula
+set encoding=UTF-8
 
 " The Silver Searcher
 if executable('ag')
