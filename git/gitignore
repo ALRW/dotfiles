@@ -2,6 +2,7 @@
 .DS_Store
 Desktop.ini
 
+.rebel_readline_history
 # Thumbnail cache files
 ._*
 Thumbs.db
