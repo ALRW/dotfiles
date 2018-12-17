@@ -108,6 +108,9 @@ ln -s ./vim/ideavimrc ~/.ideavimrc
 ln -s ./pet/snippet.toml ~/.snippet.toml
 ln -s ./git/gitconfig ~/.gitconfig
 ln -s ./git/gitignore ~/.gitignore
+ln -s ./profiles.clj ~/.lein/profiles.clj
+ln -s ./rebel_readline.edn ~/.clojure/rebel_readline.edn
+
 
 # TODO Write script to create .gitconfig.local file with user and email
 # TODO Make each phase of the installation user defined

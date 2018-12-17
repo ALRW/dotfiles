@@ -7,4 +7,6 @@
                   [lein-kibit "0.1.6"]
                   [lein-bikeshed "0.5.1"]]
         :dependencies [[vvvvalvalval/scope-capture "0.2.0"]
-                       [cljfmt "0.5.1"]]}}
+                       [com.bhauman/rebel-readline "0.1.4"]
+                       [cljfmt "0.5.1"]]
+        :aliases {"rebl" ["trampoline" "run" "-m" "rebel-readline.main"]}}}

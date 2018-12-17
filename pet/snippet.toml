@@ -202,3 +202,8 @@
   description = "[clojure] check for outdated dependencies in a project using deps.edn"
   command = "clojure -Sdeps '{:deps {olical/depot {:mvn/version \"1.5.0\"}}}' -m depot.outdated.main"
   output = ""
+
+[[snippets]]
+  description = "[Kafka] produce messages to an avro encoded topic with a specific schema"
+  command = "kafka-avro-console-producer --broker-list <broker-list-host:port=localhost:9092> --topic <topic-name=loan-application-submitted> --property schema.registry.url=<schema-registry-url=http://localhost:8081> --property value.schema=<your-schema>"
+  output = ""
