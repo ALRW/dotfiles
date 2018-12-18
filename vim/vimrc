@@ -168,13 +168,15 @@ let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 let g:ale_linters = {'javascript': ['eslint']}
 
 " vim slime setup
-let g:slime_default_config = {'sessionname': system("screen -ls | grep Attached | cut -f2 | perl -pe 'chomp'"), "windowname": "0"}
+let g:slime_target = "vimterminal"
+
+" open a clojure repl in a vertical split
+nnoremap <leader>r :vert bo term lein rebl<CR>
 
 " Tern/YouCompleteMe leader mappings
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>D :YcmCompleter GetDoc<CR>
 nnoremap <leader>p :YcmCompleter GoToReferences<CR>
-nnoremap <leader>r :YcmCompleter RefactorRename<CR>
 
 " Toggle Rainbow parens
 let g:rainbow_active = 0
