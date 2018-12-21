@@ -173,6 +173,9 @@ let g:slime_target = "vimterminal"
 " open a clojure repl in a vertical split
 nnoremap <leader>r :vert bo term lein rebl<CR>
 
+" open a node repl in vertical split
+nnoremap <leader>N :vert bo term node<CR>
+
 " Tern/YouCompleteMe leader mappings
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>D :YcmCompleter GetDoc<CR>
