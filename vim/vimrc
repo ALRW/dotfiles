@@ -147,6 +147,13 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" terminal movement
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+tnoremap <C-h> <C-w>h
+tnoremap <C-l> <C-w>l
+
+tnoremap <C-d> <C-\><C-n>:q!<CR>
 " enable flow types for vim javascript
 let g:javascript_plugin_flow = 1
 
