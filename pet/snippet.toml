@@ -207,3 +207,13 @@
   description = "[Kafka] produce messages to an avro encoded topic with a specific schema"
   command = "kafka-avro-console-producer --broker-list <broker-list-host:port=localhost:9092> --topic <topic-name=loan-application-submitted> --property schema.registry.url=<schema-registry-url=http://localhost:8081> --property value.schema=<your-schema>"
   output = ""
+
+[[snippets]]
+  description = "[RMQ] list queues on remote exchange"
+  command = "rabbitmqadmin --host=<host=\"$RABBITMQ_HOST\"> --port=443 --ssl --vhost=<vhost=\"$RABBITMQ_VHOST\"> --username=<username=\"$RABBITMQ_USERNAME\"> --password=<password=\"$RABBITMQ_PASSWORD\"> list queues"
+  output = ""
+
+[[snippets]]
+  description = "[RMQ] pull message from a remote queue non-destructively"
+  command = "rabbitmqadmin --host=\"$RABBITMQ_HOST\" --port=443 --ssl --vhost=\"$RABBITMQ_VHOST\" --username=\"$RABBITMQ_USERNAME\" --password=\"$RABBITMQ_PASSWORD\" get queue=<queue-name> requeue=<requeue=true> count=<count=1>"
+  output = ""
