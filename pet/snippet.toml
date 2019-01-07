@@ -217,3 +217,13 @@
   description = "[RMQ] pull message from a remote queue non-destructively"
   command = "rabbitmqadmin --host=\"$RABBITMQ_HOST\" --port=443 --ssl --vhost=\"$RABBITMQ_VHOST\" --username=\"$RABBITMQ_USERNAME\" --password=\"$RABBITMQ_PASSWORD\" get queue=<queue-name> requeue=<requeue=true> count=<count=1>"
   output = ""
+
+[[snippets]]
+  description = "[Kafka] Get max offset for topic and partitions"
+  command = "kafka-run-class kafka.tools.GetOffsetShell --broker-list <broker-list=kafka.service.consul>:9092 --topic <topic>"
+  output = ""
+
+[[snippets]]
+  description = "[Kafka] consume a messages for a particular topic from a given offset on a given partition"
+  command = "kafka-console-consumer --bootstrap-server <bootstrap-server=kafka.service.consul>:9092 --topic <topic> --offset <offset> --partition <partition>"
+  output = ""
