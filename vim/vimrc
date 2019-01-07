@@ -194,7 +194,7 @@ nnoremap <leader>p :YcmCompleter GoToReferences<CR>
 " Toggle Rainbow parens
 let g:rainbow_active = 0
 nnoremap <leader>R :RainbowToggle<CR>
-" cycle through grep results easily
-nmap <silent> <C-N> :cn<CR>zv
-nmap <silent> <C-M> :cp<CR>zv
 
+" Add google calendar for vim-calendar
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
