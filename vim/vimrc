@@ -85,6 +85,9 @@ set lazyredraw
 " highlights matching parentheses
 set showmatch
 
+" buffers are hidden with unsaved changes rather than forcing you to write
+set hidden
+
 " search as characters are entered, highlight matches, ignore case except when using capitals
 set incsearch
 set hlsearch
