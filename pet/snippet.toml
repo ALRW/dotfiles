@@ -227,3 +227,13 @@
   description = "[Kafka] consume a messages for a particular topic from a given offset on a given partition"
   command = "kafka-console-consumer --bootstrap-server <bootstrap-server=kafka.service.consul>:9092 --topic <topic> --offset <offset> --partition <partition>"
   output = ""
+
+[[snippets]]
+  description = "[curl] pull site and search for emails"
+  command = "curl -v --silent <site> 2>&1 | grep -i -o '[A-Z0-9._%+-]\\+@[A-Z0-9.-]\\+\\.[A-Z]\\{2,4\\}'"
+  output = ""
+
+[[snippets]]
+  description = "[MacOS] set the KeyRepeat variable to 1 for faster key-repeat"
+  command = "defaults write NSGlobalDomain KeyRepeat -int 1"
+  output = ""
