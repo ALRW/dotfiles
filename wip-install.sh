@@ -45,6 +45,7 @@ packages=(
 "consul"
 "vault"
 "cmake"
+"tmate"
 )
 
 declare -a casks
