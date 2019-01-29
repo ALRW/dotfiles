@@ -174,31 +174,6 @@
   output = ""
 
 [[snippets]]
-  description = "[warp] Create new warp"
-  command = "warp open <name>"
-  output = ""
-
-[[snippets]]
-  description = "[warp] connect to a warp"
-  command = "warp connect <name>"
-  output = ""
-
-[[snippets]]
-  description = "[warp] from inside a warp retreive the list of connected users"
-  command = "warp state"
-  output = ""
-
-[[snippets]]
-  description = "[warp] give write access to a warp user"
-  command = "warp authorize <username>"
-  output = ""
-
-[[snippets]]
-  description = "[warp] revoke write access to a warp user"
-  command = "warp revoke <username>"
-  output = ""
-
-[[snippets]]
   description = "[clojure] check for outdated dependencies in a project using deps.edn"
   command = "clojure -Sdeps '{:deps {olical/depot {:mvn/version \"1.5.0\"}}}' -m depot.outdated.main"
   output = ""
@@ -236,4 +211,19 @@
 [[snippets]]
   description = "[MacOS] set the KeyRepeat variable to 1 for faster key-repeat"
   command = "defaults write NSGlobalDomain KeyRepeat -int 1"
+  output = ""
+
+[[snippets]]
+  description = "[Kafka] Consume a message"
+  command = "kafka-console-consumer --bootstrap-server kafka.service.consul:9092 --from-beginning --topic <topic>"
+  output = ""
+
+[[snippets]]
+  description = "[kafka] well formatted output for edn topics"
+  command = "kafkacat -b <bootstrap-servers=kafka.service.consul> -t <topic=loan-application-manager-decision-command-aggregated-state-changelog> -q | sed -e 's/\\:\\([a-z-]*\\)/\"\\1\":/g' -e 's/#uuid//g' -e 's/\" *\"/\", \"/g' | jq"
+  output = ""
+
+[[snippets]]
+  description = "Base64 encode a string"
+  command = "echo -n <string> | openssl base64"
   output = ""

@@ -11,6 +11,12 @@ man() {
       man "$@"
 }
 
+# open a repl and loan in the deps you want as args e.g.
+# rebl 'clj-time {:mvn/version "_"}'
+rebl() {
+  clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version \"0.1.4\"} $@}}" -m rebel-readline.main
+}
+
 # Use fo to search and preview files with fzf and bat then use ctrl-o to run 'open' or Enter/ctrl-e to open in editor
 fo() {
   local out file key

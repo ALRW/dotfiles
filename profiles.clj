@@ -13,5 +13,5 @@
                        [com.bhauman/rebel-readline "0.1.4"]
                        [cljfmt "0.5.1"]]
         :injections [(require 'sc.api)]
-        :middleware [whidbey.plugin/repl-pprint cider-nrepl.plugin/middleware]
+        :middleware [whidbey.plugin/middleware cider-nrepl.plugin/middleware]
         :aliases {"rebl" ["trampoline" "run" "-m" "rebel-readline.main"]}}}
