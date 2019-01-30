@@ -46,6 +46,7 @@ packages=(
 "vault"
 "cmake"
 "tmate"
+"graphviz"
 )
 
 declare -a casks

@@ -8,10 +8,14 @@
                   [lein-eftest "0.5.4"]
                   [lein-try "0.4.3"]
                   [lein-kibit "0.1.6"]
+                  [ns-graph "0.1.3"]
                   [lein-bikeshed "0.5.1"]]
         :dependencies [[vvvvalvalval/scope-capture "0.3.2"]
                        [com.bhauman/rebel-readline "0.1.4"]
                        [cljfmt "0.5.1"]]
         :injections [(require 'sc.api)]
         :middleware [whidbey.plugin/middleware cider-nrepl.plugin/middleware]
+        :ns-graph {:name "project-graph"
+                   :source-paths "./src"
+                   :exclude ["java.*" "clojure.*"]}
         :aliases {"rebl" ["trampoline" "run" "-m" "rebel-readline.main"]}}}
