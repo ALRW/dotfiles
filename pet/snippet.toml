@@ -227,3 +227,18 @@
   description = "Base64 encode a string"
   command = "echo -n <string> | openssl base64"
   output = ""
+
+[[snippets]]
+  description = "[AWS] sign up a new user to a cognito user pool"
+  command = "aws cognito-idp sign-up --region <cognito-region> --client-id <cognito-app-id> --username <username> --password <password>"
+  output = ""
+
+[[snippets]]
+  description = "[AWS] confirm a user in a given cognito user pool"
+  command = "aws cognito-idp admin-confirm-sign-up --region <cognito-region> --user-pool-id <cognito-user-pool-id> --username <username>"
+  output = ""
+
+[[snippets]]
+  description = "[serverless] invoke a local function with mock data"
+  command = "serverless invoke local --function <function> --path <mock-data-path>"
+  output = ""

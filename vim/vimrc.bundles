@@ -45,7 +45,6 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug 'w0rp/ale'
-Plug 'pbrisbin/vim-mkdir'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-repeat'
@@ -62,7 +61,6 @@ Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'jpalardy/vim-slime'
 Plug 'ryanoasis/vim-devicons'
-Plug 'itchyny/calendar.vim'
 Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'ts']}
 Plug 'quramy/tsuquyomi', {'for': ['typescript', 'ts']}
 Plug 'valloric/youcompleteme', { 'do': function('BuildYCM'), 'for': ['javascript', 'jsx', 'javascript.jsx'] }
