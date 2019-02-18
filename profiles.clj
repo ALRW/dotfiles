@@ -1,6 +1,5 @@
-{:user {:plugins [[cider/cider-nrepl "0.18.0"]
+{:user {:plugins [[cider/cider-nrepl "0.21.1"]
                   [venantius/yagni "0.1.7"]
-                  [mvxcvi/whidbey "2.0.0"]
                   [lein-cljfmt "0.6.3"]
                   [nrepl "0.5.3"]
                   [lein-auto "0.1.3"]
@@ -14,7 +13,7 @@
                        [com.bhauman/rebel-readline "0.1.4"]
                        [cljfmt "0.5.1"]]
         :injections [(require 'sc.api)]
-        :middleware [whidbey.plugin/middleware cider-nrepl.plugin/middleware]
+        :middleware [cider-nrepl.plugin/middleware]
         :ns-graph {:name "project-graph"
                    :source-paths "./src"
                    :exclude ["java.*" "clojure.*"]}

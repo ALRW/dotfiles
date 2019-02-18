@@ -164,6 +164,7 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " Emmet Configuration
+let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
                         \ 'javascript.jsx' : {
                         \ 'extends' : 'jsx',
@@ -195,6 +196,5 @@ nnoremap <leader>p :YcmCompleter GoToReferences<CR>
 let g:rainbow_active = 0
 nnoremap <leader>R :RainbowToggle<CR>
 
-" Add google calendar for vim-calendar
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
+" Automatically run prettier when you save
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
