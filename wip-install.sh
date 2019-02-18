@@ -6,17 +6,17 @@
 # The following are helper functions and data structures used by the script
 brewInstall () {
   echo "Installing: $1"
-  brew install $1
+  brew install "$1"
 }
 
 caskInstall () {
   echo "Installing: $1"
-  brew cask install --appdir="/Applications" $1
+  brew cask install --appdir="/Applications" "$1"
 }
 
 # Function to check if a command exists and exit otherwise
 checkExists () {
-  command $1 >/dev/null 2>&1 ||
+  command "$1" >/dev/null 2>&1 ||
     { echo >&2 "ERROR: $1 required but not installed"; exit 1;}
   }
 
@@ -66,7 +66,7 @@ printf "\n\n"
 echo "Before continuing please ensure that you have the Apple Command-line tools installed"
 echo "Hint: run 'xcode-select install'"
 printf "\n\n"
-read -p "Press any key to continue" -n1 -s
+read -pr "Press any key to continue" -n1 -s
 printf "\n\n"
 
 # Install rvm
@@ -90,12 +90,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # Install packages
 for ((i = 0; i < ${#packages[@]}; i++)); do
-  brewInstall ${packages[$i]}
+  brewInstall "${packages[$i]}"
 done
 
 # Install casks
 for ((i = 0; i < ${#casks[@]}; i++)); do
-  caskInstall ${casks[$i]}
+  caskInstall "${casks[$i]}"
 done
 
 # Create symbolic links for all dotfiles
@@ -112,7 +112,7 @@ ln -s ./git/gitconfig ~/.gitconfig
 ln -s ./git/gitignore ~/.gitignore
 ln -s ./profiles.clj ~/.lein/profiles.clj
 ln -s ./rebel_readline.edn ~/.clojure/rebel_readline.edn
-
+ln -s ./tern-config ~/.tern-config
 
 # TODO Write script to create .gitconfig.local file with user and email
 # TODO Make each phase of the installation user defined
