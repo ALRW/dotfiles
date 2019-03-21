@@ -118,3 +118,6 @@ complete -o nospace -C /usr/local/bin/vault vault
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/andrewwerner/.nvm/versions/node/v11.9.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/andrewwerner/.nvm/versions/node/v11.9.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/andrewwerner/.nvm/versions/node/v8.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/andrewwerner/.nvm/versions/node/v8.6.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
