@@ -242,3 +242,23 @@
   description = "[serverless] invoke a local function with mock data"
   command = "serverless invoke local --function <function> --path <mock-data-path>"
   output = ""
+
+[[snippets]]
+  description = "[Kafka] get versions for a particular schema"
+  command = "curl  http://schema-registry.service.consul/subjects/loan-application-updated-value/versions"
+  output = ""
+
+[[snippets]]
+  description = "[Kafka] reset the topic offsets for a given application and topics"
+  command = "kafka-streams-application-reset --bootstrap-servers <bootstrap-servers=kafka.service.consul>:9092 --input-topics <input-topics-string-list> --application-id <application-id>"
+  output = ""
+
+[[snippets]]
+  description = "[Schema-registry] show all versions for a particular topic schema"
+  command = "curl -X GET <schema-registry-url=http://schema-registry.service.consul>/subjects/<schema-name>-value/versions"
+  output = ""
+
+[[snippets]]
+  description = "[Kafka] Describe a kafka consumer group (application)"
+  command = "kafka-consumer-groups --bootstrap-server <bootstrap-server=kafka.service.consul>:9092 --group <group-name> --describe"
+  output = ""

@@ -164,7 +164,7 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " Emmet Configuration
-let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_settings = {
                         \ 'javascript.jsx' : {
                         \ 'extends' : 'jsx',
