@@ -184,7 +184,8 @@ let g:ale_linters = {'javascript': ['eslint']}
 let g:slime_target = "vimterminal"
 
 " open a clojure repl in a vertical split
-nnoremap <leader>r :vert bo term lein rebl<CR>
+nnoremap <leader>lr :vert bo term lein rebl<CR>
+nnoremap <leader>r :vert bo term clj -A:rebel<CR>
 
 " open a node repl in vertical split
 nnoremap <leader>N :vert bo term node<CR>
