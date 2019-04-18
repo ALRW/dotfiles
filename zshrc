@@ -109,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.localVars ] && source $HOME/.localVars
 [ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
 
+export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/.ignore --hidden -g ""'
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 

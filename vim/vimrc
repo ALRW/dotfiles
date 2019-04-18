@@ -35,6 +35,8 @@ nnoremap <leader><leader> <c-^>
 map <leader>n :NERDTreeToggle<CR>
 
 " Opens silver searcher in vim for easy searching
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, '--color-path="0;33"', <bang>0)
+
 nnoremap <leader>a :Ag<CR>
 
 " Opens file search using fzf
