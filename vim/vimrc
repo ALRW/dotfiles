@@ -204,5 +204,8 @@ nnoremap <leader>p :YcmCompleter GoToReferences<CR>
 let g:rainbow_active = 0
 nnoremap <leader>R :RainbowToggle<CR>
 
+" reset search char for clever-f
+map <leader>c <Plug>(clever-f-reset)
+
 " Automatically run prettier when you save
 autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
