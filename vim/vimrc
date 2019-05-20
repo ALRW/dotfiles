@@ -152,6 +152,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Set same defaults for splits
+set splitbelow
+set splitright
+
 " terminal movement
 tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
@@ -185,7 +189,8 @@ let g:slime_target = "vimterminal"
 
 " open a clojure repl in a vertical split
 nnoremap <leader>lr :vert bo term lein rebl<CR>
-nnoremap <leader>r :vert bo term clj -A:rebel<CR>
+
+nnoremap <leader>r :vert bo term clojure -A:rebel<CR>
 
 " open a node repl in vertical split
 nnoremap <leader>N :vert bo term node<CR>

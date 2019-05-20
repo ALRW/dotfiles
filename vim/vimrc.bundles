@@ -58,10 +58,9 @@ Plug 'elzr/vim-json'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'jpalardy/vim-slime'
 Plug 'ryanoasis/vim-devicons'
-Plug 'skywind3000/asyncrun.vim'
+Plug 'rhysd/clever-f.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'ts']}
 Plug 'quramy/tsuquyomi', {'for': ['typescript', 'ts']}
