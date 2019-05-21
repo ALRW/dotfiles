@@ -51,9 +51,10 @@ nnoremap <leader>T :BTags<CR>
 " Quickly open a vertical split
 nnoremap <leader>v :vsp<CR>
 
-" format clojure code 
-let g:clj_fmt_autosave = 0
-nnoremap <leader>F :Cljfmt<CR>
+"Setting up auto-save
+:au FocusLost * :wa
+set autowrite
+set autoread
 
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
