@@ -17,6 +17,8 @@ Thumbs.db
 # Clojure build stuff
 .cpcache
 
+# Clojure language server files
+.lsp
 # Application specific files
 venv
 node_modules
