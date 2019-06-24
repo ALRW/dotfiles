@@ -45,41 +45,26 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug 'w0rp/ale'
-Plug 'pbrisbin/vim-mkdir'
-Plug 'ervandew/supertab'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'bling/vim-airline'
 Plug 'vim-scripts/tComment'
+Plug 'itchyny/lightline.vim'
 Plug 'blueshirts/darcula'
-Plug 'elzr/vim-json'
 Plug 'jiangmiao/auto-pairs'
-Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rhysd/clever-f.vim'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'ts']}
-Plug 'quramy/tsuquyomi', {'for': ['typescript', 'ts']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}
-Plug 'valloric/youcompleteme', { 'do': function('BuildYCM'), 'for': ['javascript', 'jsx', 'javascript.jsx'] }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
-Plug 'vim-scripts/c.vim', { 'for': 'c' }
-Plug 'pangloss/vim-javascript', {'for': ['javascript', 'jsx', 'javascript.jsx']}
-Plug 'mxw/vim-jsx', {'for': ['javascript', 'jsx', 'javascript.jsx']}
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'tpope/vim-rake', { 'for': 'ruby' }
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
