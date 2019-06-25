@@ -59,7 +59,6 @@ Plug 'jpalardy/vim-slime'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rhysd/clever-f.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'shougo/echodoc'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}

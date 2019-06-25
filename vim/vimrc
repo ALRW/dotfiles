@@ -286,9 +286,5 @@ nnoremap <leader>N :vert bo term node<CR>
 " reset search char for clever-f
 map <leader>c <Plug>(clever-f-reset)
 
-" print semicolons
 " Prettier default: true
 let g:prettier#config#semi = 'false'
-
-" Echodoc always
-let g:echodoc_enable_at_startup = 1
