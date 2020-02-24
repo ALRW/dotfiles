@@ -44,7 +44,7 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -58,6 +58,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rhysd/clever-f.vim'
+Plug 'posva/vim-vue'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',

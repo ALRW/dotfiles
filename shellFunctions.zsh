@@ -1,20 +1,12 @@
-# Colorised man pages
-man() {
-  env \
-    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-    LESS_TERMCAP_md=$(printf "\e[1;31m") \
-    LESS_TERMCAP_me=$(printf "\e[0m") \
-    LESS_TERMCAP_se=$(printf "\e[0m") \
-    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-    LESS_TERMCAP_ue=$(printf "\e[0m") \
-    LESS_TERMCAP_us=$(printf "\e[1;32m") \
-      man "$@"
-}
-
 # open a repl and loan in the deps you want as args e.g.
-# rebl 'clj-time {:mvn/version "_"}'
-rebl() {
-  clojure -Sdeps "{:deps {com.bhauman/rebel-readline {:mvn/version \"0.1.4\"} $@}}" -m rebel-readline.main
+
+function clj() {
+    if [[ -z $@ ]]
+    then
+        command clojure -A:repl
+    else
+        command clj $@
+    fi
 }
 
 # Use fo to search and preview files with fzf and bat then use ctrl-o to run 'open' or Enter/ctrl-e to open in editor
