@@ -267,20 +267,13 @@ let g:ale_fixers = {'javascript': ['eslint']}
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
 
-" vim slime setup
-let g:slime_target = "vimterminal"
-
-" REPL SHORTCUTS
-" open a clojure repl in a vertical split
-nnoremap <leader>lr :vert bo term lein rebl<CR>
-
-nnoremap <leader>r :vert bo term clojure -A:rebel<CR>
-
-" open a node repl in vertical split
-nnoremap <leader>N :vert bo term node<CR>
-
 " reset search char for clever-f
 map <leader>c <Plug>(clever-f-reset)
 
-" Prettier default: true
+" reply repl list for filetyp
+let g:reply_repls = {
+      \  'clojure': ['clojure'],
+      \}
+
+"" Prettier default: true
 let g:prettier#config#semi = 'false'
