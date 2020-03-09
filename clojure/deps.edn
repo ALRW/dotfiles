@@ -1,5 +1,14 @@
-{
- :aliases {:repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "RELEASE"}
+{:aliases {:new {:extra-deps {seancorfield/clj-new
+                              {:mvn/version "0.5.5"}}
+                 :main-opts ["-m" "clj-new.create"]}
+           :outdated {:extra-deps {olical/depot {:mvn/version "..."}}
+                      :main-opts ["-m" "depot.outdated.main"]}
+           :lint {:extra-deps {com.jameslaverack/cljfmt-runner
+                               {:git/url "https://github.com/JamesLaverack/cljfmt-runner"
+                                :sha "97960e9a6464935534b5a6bab529e063d0027128"}}
+                  :main-opts ["-m" "cljfmt-runner.check"]}
+           :lint/fix {:main-opts ["-m" "cljfmt-runner.fix"]}
+           :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "RELEASE"}
                                com.gfredericks/user.clj {:mvn/version "RELEASE"}
                                org.clojure/core.async {:mvn/version "RELEASE"}
                                org.clojure/core.logic {:mvn/version "RELEASE"}
@@ -15,6 +24,4 @@
                                org.clojure/clojure {:mvn/version "RELEASE"}
                                generateme/fastmath {:mvn/version "RELEASE"}
                                clj-commons/pomegranate {:mvn/version "RELEASE"}}
-                  :main-opts  ["-m" "rebel-readline.main"]}
-           }
- }
+                  :main-opts  ["-m" "rebel-readline.main"]}}}
