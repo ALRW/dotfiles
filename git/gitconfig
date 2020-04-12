@@ -39,6 +39,7 @@
     path = ~/.gitconfig.local
 [url "git@github.com:"]
   insteadOf = git://github
+	insteadOf = https://github.com/
 [core]
   excludesfile = ~/.gitignore
   editor = /usr/bin/vim
