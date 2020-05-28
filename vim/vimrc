@@ -273,6 +273,7 @@ map <leader>c <Plug>(clever-f-reset)
 " reply repl list for filetyp
 let g:reply_repls = {
       \  'clojure': ['clojure'],
+      \  'typescript': ['ts-node'],
       \}
 
 "" Prettier default: true
