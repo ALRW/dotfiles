@@ -56,9 +56,9 @@ Plug 'blueshirts/darcula'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rhysd/reply.vim', { 'on': ['Repl', 'ReplAuto'] }
 Plug 'rhysd/clever-f.vim'
-Plug 'posva/vim-vue'
+Plug 'sillybun/vim-repl'
+Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',

@@ -270,11 +270,14 @@ let g:ale_fix_on_save = 1
 " reset search char for clever-f
 map <leader>c <Plug>(clever-f-reset)
 
-" reply repl list for filetyp
-let g:reply_repls = {
+" repl-vim config
+let g:repl_program = {
       \  'clojure': ['clojure'],
-      \  'typescript': ['ts-node'],
+      \  'javascript': ['node'],
+      \  'typescript': ['ts-node', 'node'],
       \}
+nnoremap <leader>r :REPLToggle<Cr>
+let g:repl_position = 3
 
 "" Prettier default: true
 let g:prettier#config#semi = 'false'
