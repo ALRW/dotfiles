@@ -56,10 +56,10 @@ Plug 'blueshirts/darcula'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rhysd/clever-f.vim'
 Plug 'sillybun/vim-repl'
-Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'justinmk/vim-sneak'
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': { -> coc#util#install() } }
+Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}

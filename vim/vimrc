@@ -267,10 +267,7 @@ let g:ale_fixers = {'javascript': ['eslint']}
 " Fix files automatically on save
 let g:ale_fix_on_save = 1
 
-" reset search char for clever-f
-map <leader>c <Plug>(clever-f-reset)
-
-" repl-vim config
+" vim-repl config
 let g:repl_program = {
       \  'clojure': ['clojure'],
       \  'javascript': ['node'],
@@ -279,5 +276,11 @@ let g:repl_program = {
 nnoremap <leader>r :REPLToggle<Cr>
 let g:repl_position = 3
 
-"" Prettier default: true
+" vim-sneak label mode
+let g:sneak#label = 1
+" overmap f with vim-sneak
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+
+" Prettier default: true
 let g:prettier#config#semi = 'false'
