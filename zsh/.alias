@@ -1,15 +1,3 @@
-# Directory Traversal
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias ~="cd ~"
-
-# Allows ctags to work on mac
-alias ctags="`brew --prefix`/bin/ctags"
-
-# Copy the working directory
-alias cpwd='pwd|tr -d "\n"|pbcopy'
-
 # Network
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
@@ -27,9 +15,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Use brew ctags
-alias ctags="`brew --prefix`/bin/ctags"
 
 # copy snippet to clipboard easily
 alias psp="pet search | pbcopy"
