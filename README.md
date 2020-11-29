@@ -6,16 +6,23 @@ These are my personal dotfiles. They are and always will be a work in progress
 This assumes a new install on a mac and uses `brew` to manage software and
 dependencies and stow to manage symlinking everything once complete
 
-Make sure you can run the install script
+## Install
+
+This assumes you have installed ruby and homebrew.
+
+clone this repo into `~`
+
 ```sh
-chmod 777 setup.sh
+# installs all brew formulas
+cd dotfiles
+brew bundle
 ```
 
-Running the install script
 ```sh
-./setup.sh
+# sets up all symbolic links in $HOME
+stow zsh vim gitconfig pet clojure
 ```
 
-## Clojure Setup
+## A note on the Clojure setup
 
 For documentation on the clj repl used have a look [here](https://asciinema.org/a/296507)
