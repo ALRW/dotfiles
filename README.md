@@ -15,3 +15,7 @@ Running the install script
 ```sh
 ./setup.sh
 ```
+
+## Clojure Setup
+
+For documentation on the clj repl used have a look [here](https://asciinema.org/a/296507)
