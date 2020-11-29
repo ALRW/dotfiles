@@ -55,7 +55,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'blueshirts/darcula'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'sillybun/vim-repl'
 Plug 'justinmk/vim-sneak'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -66,6 +65,8 @@ Plug 'prettier/vim-prettier', {
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/goyo.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

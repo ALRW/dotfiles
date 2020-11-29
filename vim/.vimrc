@@ -183,16 +183,21 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " " Add diagnostic info for https://github.com/itchyny/lightline.vim
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
-      \ },
-      \ }
+                        \ 'colorscheme': 'wombat',
+                        \ 'active': {
+                        \   'left': [ [ 'mode', 'paste' ],
+                        \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+                        \ },
+                        \ 'component_function': {
+                        \   'cocstatus': 'coc#status',
+                        \   'currentfunction': 'CocCurrentFunction'
+                        \ },
+                        \ }
 
 " search as characters are entered, highlight matches, ignore case except when using capitals
 set incsearch
@@ -271,6 +276,7 @@ let g:ale_fix_on_save = 1
 let g:repl_program = {
       \  'clojure': ['clojure'],
       \  'javascript': ['node'],
+      \  'ruby': ['irb', 'pry'],
       \  'typescript': ['ts-node', 'node'],
       \}
 nnoremap <leader>r :REPLToggle<Cr>
