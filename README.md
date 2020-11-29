@@ -1,17 +1,17 @@
-DOTFILES
-===========================
+# DOTFILES
 
-Current base system setup. Feel free to take and use whatever is useful.
+These are my personal dotfiles. They are and always will be a work in progress
+:construction: so use at your own peril!
 
-Installation is very much in :construction:
+This assumes a new install on a mac and uses `brew` to manage software and
+dependencies and stow to manage symlinking everything once complete
 
 Make sure you can run the install script
 ```sh
-chmod 777 wip-install.sh
+chmod 777 setup.sh
 ```
-
 
 Running the install script
-```
-./wip-install.sh
+```sh
+./setup.sh
 ```
