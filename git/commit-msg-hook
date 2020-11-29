@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-REGEX=".*[A-Z]{2,9}-?[0-9]+.*"
-if cat $1 | grep -E $REGEX; then
-        echo "Commit message is correctly formatted"
-else
-        echo "ERROR: Commit message must contain the Jira ticket number e.g. ABC-123" >&2
-        exit 1
-fi
