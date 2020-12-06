@@ -243,7 +243,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Set same defaults for splits
+" Set sane defaults for splits
 set splitbelow
 set splitright
 
