@@ -20,7 +20,7 @@ brew bundle
 
 ```sh
 # sets up all symbolic links in $HOME
-stow zsh vim gitconfig pet clojure
+stow --dotfiles zsh vim gitconfig clojure pet
 ```
 
 ## A note on the Clojure setup
