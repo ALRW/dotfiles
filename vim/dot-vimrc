@@ -278,6 +278,7 @@ let g:repl_program = {
       \  'javascript': ['node'],
       \  'ruby': ['irb', 'pry'],
       \  'typescript': ['ts-node', 'node'],
+      \  'scala': ['amm', 'scala'],
       \}
 nnoremap <leader>r :REPLToggle<Cr>
 let g:repl_position = 3

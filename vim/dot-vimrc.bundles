@@ -44,6 +44,9 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
+Plug 'mhinz/vim-startify'
+Plug 'psliwka/vim-smoothie'
+Plug 'Jorengarenar/vim-MvVis'
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -59,9 +62,6 @@ Plug 'sillybun/vim-repl'
 Plug 'justinmk/vim-sneak'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
