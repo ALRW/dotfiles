@@ -46,6 +46,7 @@ nnoremap <leader>v :vsp<CR>
 " Quickly edit and source vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>eb :e ~/.vimrc.bundles<CR>
+nmap <silent> <leader>ec :e ~/.vimrc.coc<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " use jk to exit insert mode and write changes
