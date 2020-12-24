@@ -44,28 +44,43 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
-Plug 'mhinz/vim-startify'
+" Movement plugins
+Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
+" Smooth scrolling
 Plug 'psliwka/vim-smoothie'
+" Moving visually selected elements via Ctrl + mv key
 Plug 'Jorengarenar/vim-MvVis'
+" Custom startup screen
+Plug 'mhinz/vim-startify'
+" Shortcuts to test from within Vim
+Plug 'vim-test/vim-test'
+" Language linting and analysis
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" FZF should speak for itself!
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Sensible repetition, surrounding status-line, colors and comments
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
 Plug 'itchyny/lightline.vim'
 Plug 'blueshirts/darcula'
+" Auto close parentheses and do blocks
 Plug 'cohama/lexima.vim'
+" Brings emmet to vim
 Plug 'mattn/emmet-vim'
+" Embed a repl in vim and provide easy methods to send code
 Plug 'sillybun/vim-repl'
-Plug 'justinmk/vim-sneak'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'posva/vim-vue', { 'for': 'vue' }
+" Tree view sidebar and icons for different filetype
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
+Plug 'ryanoasis/vim-devicons'
+" Clojure/Lisp plugins for sensible defaults
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'ryanoasis/vim-devicons'
+" Pleasant, distraction free writing in vim
 Plug 'junegunn/goyo.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))

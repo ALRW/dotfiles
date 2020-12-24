@@ -197,9 +197,25 @@ let g:repl_position = 3
 
 " vim-sneak label mode
 let g:sneak#label = 1
-" overmap f with vim-sneak
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+map <leader>s <Plug>Sneak_s
+map <leader>S <Plug>Sneak_S
 
-" Prettier default: true
-let g:prettier#config#semi = 'false'
+" vim-test shortcuts
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
+
+" vim-easymotion shortcuts
+" <Leader>f{char} to move to {char}
+map  <leader>f <Plug>(easymotion-bd-f)
+nmap <leader>f <Plug>(easymotion-overwin-f)
+
+" Move to line
+map <leader>L <Plug>(easymotion-bd-jk)
+nmap <leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <leader>w <Plug>(easymotion-bd-w)
+nmap <leader>w <Plug>(easymotion-overwin-w)
