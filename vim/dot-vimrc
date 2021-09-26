@@ -208,14 +208,10 @@ nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 
 " vim-easymotion shortcuts
+map <leader> <Plug>(easymotion-prefix)
 " <Leader>f{char} to move to {char}
-map  <leader>f <Plug>(easymotion-bd-f)
-nmap <leader>f <Plug>(easymotion-overwin-f)
-
+nmap <space>f <Plug>(easymotion-overwin-f)
 " Move to line
-map <leader>L <Plug>(easymotion-bd-jk)
-nmap <leader>L <Plug>(easymotion-overwin-line)
-
+nmap <space>L <Plug>(easymotion-overwin-line)
 " Move to word
-map  <leader>w <Plug>(easymotion-bd-w)
-nmap <leader>w <Plug>(easymotion-overwin-w)
+nmap <space>w <Plug>(easymotion-overwin-w)
